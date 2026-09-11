@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mahmod Mater | MATER</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f2;
+  color: #123f31;
+}
+
+.container {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  min-height: 100vh;
+  background: white;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(5,35,27,.25) 65%,
+    rgba(5,35,27,.92) 100%
+  );
+}
+
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  bottom: 30px;
+  left: 28px;
+  right: 28px;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 35px;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.hero-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: .9;
+}
+
+/* LOGO */
+.logo-box {
+  background: white;
+  margin: -1px 20px 0;
+  padding: 26px 25px 18px;
+  text-align: center;
+}
+
+.logo {
+  width: 230px;
+  max-width: 80%;
+}
+
+/* INFO */
+.info {
+  padding: 10px 25px 25px;
+  text-align: center;
+}
+
+.info h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  padding: 5px 22px 25px;
+  display: grid;
+  gap: 12px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  height: 58px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.whatsapp {
+  background: #0b4c3a;
+  color: white;
+}
+
+.instagram {
+  background: #f3f3ef;
+  color: #0b4c3a;
+  border: 1px solid #ddd;
+}
+
+.facebook {
+  background: #f3f3ef;
+  color: #0b4c3a;
+  border: 1px solid #ddd;
+}
+
+.call {
+  background: #f5c400;
+  color: #123f31;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 5px 20px 35px;
+  font-size: 11px;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.yellow-line {
+  width: 45px;
+  height: 5px;
+  background: #f5c400;
+  margin: 0 auto 18px;
+  border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="hero">
+
+    <img
+      class="hero-photo"
+      src="IMG_6958.JPG"
+      alt="Mahmod Mater">
+
+    <div class="hero-content">
+      <h1>Mahmod Mater</h1>
+      <p>Founder & CEO<br>
+      MATER Construction & Fit-Out</p>
+    </div>
+
+  </div>
+
+
+  <div class="logo-box">
+
+    <img
+      class="logo"
+      src="C8008D64-CE55-404B-8122-457B09265785.PNG"
+      alt="MATER Construction & Fit-Out">
+
+  </div>
+
+
+  <div class="info">
+
+    <div class="yellow-line"></div>
+
+    <h2>
+      Architecture • Construction • Fit-Out
+    </h2>
+
+  </div>
+
+
+  <div class="actions">
+
+    <a class="btn whatsapp"
+       href="https://wa.me/963988119075"
+       target="_blank">
+       WhatsApp
+    </a>
+
+    <a class="btn call"
+       href="tel:+963988119075">
+       Call
+    </a>
+
+    <a class="btn instagram"
+       href="https://www.instagram.com/mater_syria"
+       target="_blank">
+       Instagram
+    </a>
+
+    <a class="btn facebook"
+       href="https://www.facebook.com/share/1DNHB8HV7K/?mibextid=wwXIfr"
+       target="_blank">
+       Facebook
+    </a>
+
+  </div>
+
+
+  <div class="footer">
+    MATER CONSTRUCTION & FIT-OUT
+  </div>
+
+</div>
+
+</body>
+</html>
