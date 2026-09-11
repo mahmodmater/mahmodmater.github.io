@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#073d2d">
+
+<title>Mahmod Mater | MATER</title>
+
+<style>
+:root{
+  --green:#073d2d;
+  --yellow:#f5c400;
+  --cream:#f7f6f1;
+  --text:#17231f;
+  --muted:#68736f;
+  --white:#ffffff;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:#e9ece9;
+  color:var(--text);
+}
+
+.page{
+  width:100%;
+  max-width:480px;
+  min-height:100vh;
+  margin:auto;
+  background:var(--cream);
+  overflow:hidden;
+  box-shadow:0 0 45px rgba(0,0,0,.08);
+}
+
+/* PROFILE PHOTO */
+
+.hero{
+  position:relative;
+  height:570px;
+  background:var(--green);
+  overflow:hidden;
+}
+
+.profile-photo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(7,61,45,0) 35%,
+    rgba(7,61,45,.05) 55%,
+    rgba(7,61,45,.82) 88%,
+    var(--green) 100%
+  );
+}
+
+/* NAME */
+
+.hero-info{
+  position:absolute;
+  z-index:2;
+  bottom:34px;
+  left:28px;
+  right:28px;
+  color:white;
+}
+
+.yellow-line{
+  width:45px;
+  height:4px;
+  background:var(--yellow);
+  border-radius:20px;
+  margin-bottom:17px;
+}
+
+.hero-info h1{
+  font-size:38px;
+  line-height:1.05;
+  letter-spacing:-1.2px;
+  margin-bottom:10px;
+}
+
+.hero-info p{
+  font-size:14px;
+  line-height:1.55;
+  color:rgba(255,255,255,.85);
+}
+
+/* CONTENT */
+
+.content{
+  padding:22px 20px 35px;
+}
+
+/* COMPANY */
+
+.company-card{
+  background:white;
+  border-radius:22px;
+  padding:27px 22px;
+  box-shadow:0 12px 35px rgba(19,53,43,.08);
+  margin-bottom:20px;
+}
+
+.logo{
+  display:block;
+  width:225px;
+  max-width:78%;
+  margin:0 auto 22px;
+}
+
+.divider{
+  height:1px;
+  background:#eceeea;
+  margin-bottom:20px;
+}
+
+.company-description{
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+
+.services{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
+
+.service{
+  background:#f3f5f2;
+  border:1px solid #e8ebe7;
+  padding:8px 12px;
+  border-radius:100px;
+  font-size:11px;
+  color:var(--green);
+  font-weight:600;
+}
+
+/* CONTACT TITLE */
+
+.contact-title{
+  margin:29px 5px 15px;
+}
+
+.contact-title span{
+  display:block;
+  color:#c49c00;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:6px;
+}
+
+.contact-title h2{
+  color:var(--green);
+  font-size:25px;
+  letter-spacing:-.6px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  min-height:70px;
+  padding:0 20px;
+
+  background:var(--green);
+  color:white;
+  text-decoration:none;
+
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(7,61,45,.16);
+
+  margin-bottom:11px;
+}
+
+.whatsapp-left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.contact-icon{
+  width:40px;
+  height:40px;
+  border-radius:12px;
+  background:rgba(255,255,255,.12);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:18px;
+}
+
+.contact-text small{
+  display:block;
+  font-size:9px;
+  color:rgba(255,255,255,.62);
+  letter-spacing:1px;
+  margin-bottom:4px;
+}
+
+.contact-text strong{
+  font-size:15px;
+}
+
+.arrow{
+  color:var(--yellow);
+  font-size:22px;
+}
+
+/* SOCIAL */
+
+.social-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.social{
+  min-height:61px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:white;
+  border:1px solid #e4e8e4;
+
+  border-radius:16px;
+
+  text-decoration:none;
+  color:var(--green);
+
+  font-size:13px;
+  font-weight:700;
+}
+
+/* CALL */
+
+.call{
+  margin-top:10px;
+  min-height:59px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:var(--yellow);
+  color:#12382d;
+
+  text-decoration:none;
+  border-radius:16px;
+
+  font-size:14px;
+  font-weight:800;
+}
+
+/* FOOTER */
+
+.footer{
+  text-align:center;
+  padding:30px 10px 7px;
+}
+
+.footer-logo{
+  color:var(--green);
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:3px;
+}
+
+.footer-logo b{
+  color:var(--yellow);
+}
+
+.footer p{
+  margin-top:7px;
+  color:#969e9a;
+  font-size:9px;
+  letter-spacing:1.5px;
+}
+
+/* MOBILE */
+
+@media(max-width:380px){
+
+  .hero{
+    height:520px;
+  }
+
+  .hero-info h1{
+    font-size:34px;
+  }
+
+  .content{
+    padding-left:15px;
+    padding-right:15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <section class="hero">
+
+    <img
+      src="IMG_6958.PNG"
+      alt="Mahmod Mater"
+      class="profile-photo"
+    >
+
+    <div class="hero-info">
+
+      <div class="yellow-line"></div>
+
+      <h1>Mahmod Mater</h1>
+
+      <p>
+        Founder & CEO<br>
+        MATER Construction & Fit-Out
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <main class="content">
+
+    <section class="company-card">
+
+      <img
+        src="C8008D64-CE55-404B-8122-457B09265785.PNG"
+        alt="MATER Construction & Fit-Out"
+        class="logo"
+      >
+
+      <div class="divider"></div>
+
+      <p class="company-description">
+        Architecture, construction and premium fit-out solutions
+        with attention to design, execution and detail.
+      </p>
+
+      <div class="services">
+        <span class="service">Architecture</span>
+        <span class="service">Construction</span>
+        <span class="service">Fit-Out</span>
+      </div>
+
+    </section>
+
+
+    <div class="contact-title">
+
+      <span>GET IN TOUCH</span>
+
+      <h2>Let's build something.</h2>
+
+    </div>
+
+
+    <a
+      class="whatsapp"
+      href="https://wa.me/963988119075"
+      target="_blank"
+    >
+
+      <div class="whatsapp-left">
+
+        <div class="contact-icon">✦</div>
+
+        <div class="contact-text">
+          <small>DIRECT CONTACT</small>
+          <strong>WhatsApp</strong>
+        </div>
+
+      </div>
+
+      <div class="arrow">→</div>
+
+    </a>
+
+
+    <div class="social-grid">
+
+      <a
+        class="social"
+        href="https://www.instagram.com/mater_syria"
+        target="_blank"
+      >
+        Instagram ↗️
+      </a>
+
+      <a
+        class="social"
+        href="https://www.facebook.com/share/1DNHB8HV7K/?mibextid=wwXIfr"
+        target="_blank"
+      >
+        Facebook ↗️
+      </a>
+
+    </div>
+
+
+    <a
+      class="call"
+      href="tel:+963988119075"
+    >
+      Call +963 988 119 075
+    </a>
+
+
+    <footer class="footer">
+
+      <div class="footer-logo">
+        MATER<b>.</b>
+      </div>
+
+      <p>CONSTRUCTION & FIT-OUT</p>
+
+    </footer>
+
+  </main>
+
+</div>
+
+</body>
+</html>
